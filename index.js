@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
+require("mongoose").connect('').then(()=>console.log("is connected to DB")).catch(()=>console.log("not connected to DB"))
 
 app.use(express.json());
 app.get("/", (req, res) => {
