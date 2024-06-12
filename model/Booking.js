@@ -5,9 +5,24 @@ const bookingSchema = new mongoose.Schema({
     title:{
         type:String,
         required:true,
-        minlength:5,
-        maxlength:50
+        minlength:2,
+        maxlength:250
     },
+    author:{
+        type:String,
+        required:true,
+        minlength:2,
+        maxlength:250
+    },
+    description:{
+        type:String,
+        required:true,
+        maxlength:500
+    },
+    price:{
+        type:Number,
+        default:0,
+    }
 });
 
 const Booking = mongoose.model('Booking',bookingSchema);
