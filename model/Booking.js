@@ -8,6 +8,12 @@ const bookingSchema = new mongoose.Schema({
         minlength:2,
         maxlength:250
     },
+    author:{
+        type:String,
+        required:true,
+        minlength:2,
+        maxlength:250
+    },
     description:{
         type:String,
         required:true,
